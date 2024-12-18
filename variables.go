@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func variables() {
 	//string
 	var name string = "Mario"
 	var name2 = "Luigi"
