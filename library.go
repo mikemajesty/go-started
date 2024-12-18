@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func library() {
 	var hello = "mike"
 	fmt.Println(strings.Contains(hello, "ik"))
 
