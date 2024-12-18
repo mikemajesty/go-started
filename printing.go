@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func printing() {
 	//string
 	var name string = "Hello, \n"
 
@@ -21,4 +21,7 @@ func main() {
 	fmt.Printf("age is of type %T\n", age)
 	fmt.Printf("name is of type %T\n", name)
 	fmt.Printf("you score %0.3f points\n", 19.89)
+
+	var text = fmt.Sprintf("my age is %v and my name is %v\n", age, myName)
+	fmt.Println("text", text)
 }
