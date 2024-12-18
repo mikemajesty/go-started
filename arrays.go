@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func arrays() {
 
 	var ages [3]int = [3]int{2, 4, 6}
 	var ages2 = [3]int{2, 4, 6}
