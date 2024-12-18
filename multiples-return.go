@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func multiplesReturn(name string) (string, string) {
+func getInitials(name string) (string, string) {
 	s := strings.ToUpper(name)
 	names := strings.Split(s, " ")
 
@@ -22,7 +22,7 @@ func multiplesReturn(name string) (string, string) {
 	return initials[0], "_"
 }
 
-func main() {
+func multiplesReturn() {
 	fn, sn := getInitials("mike lima")
 	fmt.Println(fn, sn)
 
