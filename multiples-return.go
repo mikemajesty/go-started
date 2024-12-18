@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func getInitials(name string) (string, string) {
+func multiplesReturn(name string) (string, string) {
 	s := strings.ToUpper(name)
 	names := strings.Split(s, " ")
 
