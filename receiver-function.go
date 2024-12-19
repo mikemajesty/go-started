@@ -45,7 +45,12 @@ func promptOpt(bill billFunction) {
 		bill.addItem(name, p)
 
 		fmt.Printf("item added - %v: $%0.2f\n", name, p)
+		promptOpt(bill)
 	case "s":
+
+		bill.save()
+		fmt.Println("You save the file -", bill.name)
+	case "t":
 		tip, _ := getInput("Enter tip amount: ", reader)
 		t, err := strconv.ParseFloat(tip, 64)
 
@@ -58,8 +63,7 @@ func promptOpt(bill billFunction) {
 
 		fmt.Println("tip added - ", t)
 		promptOpt(bill)
-	case "t":
-		fmt.Println("You chose to save the bill", bill)
+
 	default:
 		fmt.Println("You chose not allowed")
 		promptOpt(bill)

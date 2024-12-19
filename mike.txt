@@ -1,0 +1,8 @@
+Bill breakdown:
+strogonof: ...$78.9 
+soup:      ...$1.99 
+pye:       ...$7.9 
+salad:     ...$6 
+tip:       ...$0
+
+total:     ...$94.79
