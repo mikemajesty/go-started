@@ -7,8 +7,8 @@ type bill struct {
 }
 
 // make new bills
-func newBill(name string) bill {
-	bill := bill{
+func newBill(name string) billFunction {
+	bill := billFunction{
 		name: name,
 		items: map[string]float64{
 			"soup":      1.99,
