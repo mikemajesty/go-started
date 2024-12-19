@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func receiverFunction() {
 	myBill := newFuncionBill("maario's bill")
 	myBill.updateTip(10)
 	myBill.addItem("onion ring", 5.21)
