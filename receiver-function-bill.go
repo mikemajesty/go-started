@@ -18,7 +18,7 @@ func newFuncionBill(name string) billFunction {
 			"salad":     6.00,
 			"strogonof": 78.90,
 		},
-		tip: 1.90,
+		tip: 0,
 	}
 
 	return bill
@@ -26,7 +26,7 @@ func newFuncionBill(name string) billFunction {
 
 //format bill
 
-func (bill billFunction) fomat() string {
+func (bill *billFunction) fomat() string {
 	fs := "Bill breakdown:\n"
 	var total float64 = 0
 
@@ -35,7 +35,17 @@ func (bill billFunction) fomat() string {
 		total += v
 	}
 
-	fs += fmt.Sprintf("%-10v ...$%0.2f", "total:", total)
+	fs += fmt.Sprintf("%-10v ...$%v\n\n", "tip:", bill.tip)
+
+	fs += fmt.Sprintf("%-10v ...$%0.2f", "total:", total+bill.tip)
 
 	return fs
+}
+
+func (bill *billFunction) updateTip(tip float64) {
+	bill.tip = tip
+}
+
+func (bill *billFunction) addItem(name string, price float64) {
+	bill.items[name] = price
 }
