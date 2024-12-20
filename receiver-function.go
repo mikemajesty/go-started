@@ -70,7 +70,7 @@ func promptOpt(bill billFunction) {
 	}
 }
 
-func main() {
+func recieverFunction() {
 	myBill := createBill()
 	promptOpt(myBill)
 
